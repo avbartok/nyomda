@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      href="https://cdn.glitch.global/d8e8e087-aebe-4017-a500-dd19a90dac23/nyomda-fav-2.png?v=1700640608971"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/hav7veu.css" />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/antiboredom/p5.patgrad/p5.patgrad.js"></script>
+    <script src="https://threejs.org/build/three.js"></script>
+    <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+
+    <script src="scripts/p5.riso.js"></script>
+    <script src="scripts/overlay.js"></script>
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://cdn.glitch.global/d8e8e087-aebe-4017-a500-dd19a90dac23/nyomda-fav-2.png?v=1700640608971"
+    />
+
+    <title>nyomda</title>
+
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content" role="main">
+        <!-- HEADER -->
+
+        <div class="row">
+          <img
+            class="img-artists"
+            src="https://cdn.glitch.global/d8e8e087-aebe-4017-a500-dd19a90dac23/riso_header.png?v=1700641394378"
+          />
+        </div>
+        
+                <!-- NEWSLETTER -->
+
+        <div class="row" id="news">
+          <div class="grid">
+            <div class="grid-item">
+              <h2>
+                <b>nyomda</b> ist ein solidarisches Risokollektiv in Wuppertal,
+                NRW.
+              </h2>
+            </div>
+
+            <div class="grid-item">
+              <h2><a href="mailto:newsletter@nyomda.de?subject=Newsletter-Anmeldung&body=Hallo, ich möchte mich für das Nyomda Riso Newsletter anmelden.">✦ NEWSLETTER-ANMELDUNG ✦</a></h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- NYOMDA -->
+
+        <div class="row" id="nyomda">
+          <div class="grid">
+            <div class="grid-item">
+              <h2>Die Werkstatt</h2>
+              <p>
+                In Kollaboration mit der BAG e.V. Wuppertal bieten wir
+                Bildungsangebote im Bereich bildender Kunst und Illustration für
+                Jugendliche an.<br /><br />
+
+                Als unabhängiger Verlag veröffentlichen wir KünstlerInnen
+                Editionen, Comics und Zines. Schaut vorbei und lasst euch von
+                KünstlerInnen aus NRW inspirieren.<br /><br />
+
+                Wir danken dem Druckkollektiv UNTERDRUCK (Dortmund) für die
+                Unterstützung.
+              </p>
+            </div>
+
+            <div class="grid-item">
+            
+
+            
+            
+            </div>
+
+            <div class="grid-item">
+              <h2>Termine</h2>
+              <p>
+                <b>ERÖFFNUNG</b><br />Am Sonntag, 10.12.2023 zwischen 12-18 Uhr
+                mit Riso- und Siebdruck, Musik, Getränken und Kuchen
+              </p>
+
+              <p>
+                <b>WORKSHOPS</b><br />Die ersten Workshoptermine sind in
+                Planung. Bleibt auf dem Laufenden mit unserem Newsletter
+              </p>
+                            <p>
+                <b>OFFENE WERKSTATT</b><br />
+              </p>
+            </div>
+
+            <div class="grid-item">
+              <h2>Kontakt</h2>
+              <p>
+                Ihr findet uns im Atelierraum vom Nachbarschaftsprojekt K49,
+                nahe Platz der Republik. <br /><br />
+                Lothringer Straße 49<br />
+                42107 Wuppertal <br /><br />Schaut Sonntags zu den Zeiten des
+                offenen Cafés zwischen 14-16 Uhr vorbei
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- FOTOS -->
+
+        <div class="row" id="fotos">
+          <div class="grid">
+            <div class="grid-item" id="foto-eins">
+              <h2>Foto 1</h2>
+              
+            </div>
+
+            <div class="grid-item" id="foto-zwei">
+              <h2>Foto 2</h2>
+             
+          </div>
+        </div>
+    </div>
+
+
+    <!-- FAQ -->
+
+    <div class="row" id="faq">
+      <div class="grid">
+        <div class="grid-item">
+          <h2><a>+ Was ist Risografie?</a></h2>
+          <p>
+            Risodruck ist ein umweltfreundliches maschinelles Siebverfahren aus
+            Japan. Sie eignet sich sehr gut für den Druck von Illustrationen,
+            grafischer Gestaltung und Fotos. Riso überzeugt mit einer ganz
+            eigenen Ästhetik von kräftigen Farben, feiner Rasterung und matten
+            Papieren.
+          </p>
+        </div>
+        <div class="grid-item">
+          <h2><a>+ Was ist ein Zine?</a></h2>
+          <p>
+            Ein "Zine" ist eine selbstveröffentlichte, oft nichtkommerzielle
+            Publikation, die von Einzelpersonen oder kleinen Gruppen erstellt
+            wird. Zines dienen oft als Plattform für persönlichen Ausdruck,
+            subkulturelle Diskussionen, politische Ansichten oder künstlerische
+            Experimente.
+          </p>
+        </div>
+        <div class="grid-item">
+          <h2><a>+ Wie kann ich drucken?</a></h2>
+          <p>
+            Auftragsdruck für Flyer, Plakate und Broschuren bis DIN A3 ist auf
+            Anfrage möglich. <br /><br />
+            Wenn du dich selber Risografie ausprobieren möchtest, komm zu
+            unserer offener Werkstatt oder zu einem Workshop vorbei.
+            <br /><br />
+            Bei aufwändigeren Projekten, sende uns eine Email. Wir schauen, wie
+            wir es umgesetzen können.
+          </p>
+        </div>
+        <div class="grid-item">
+          <h2><a>+ Ausstattung?</a></h2>
+          <p>
+            Wir drucken mit unserer MZ-770e, die zwei Farben gleichzeitig
+            bedienen kann. <br /><br />Aktuell verfügen wir über drei Farben:
+            CRIMSON, SCHWARZ und FLUORESCENT PINK. <br /><br>
+             <span
+              class="dot1"
+            ></span>
+            <span class="dot2"></span>
+            <span class="dot3"></span> 
+            
+            <br /><br />
+            Unsere Papiersorten:<br />
+            + Munken rough white 300g
+            <br />
+            + Papier 2<br />
+            + Papier 3
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRINTS -->
+
+    <div class="row" id="prints">
+      <div class="grid">
+        <div class="grid-item">
+          <h2>Prints</h2>
+          <p>
+          <h2><a href="mailto:newsletter@nyomda.de?subject=Nyomda Bestellung&body=Hallo, ich möchte folgendes nyomda Werk bestellen:">✦ EMAIL-BESTELLUNG ✦</a></h2>
+          </p>
+          <p>
+            Die nyomda Werke findet ihr hier. Wenn ihr etwas kaufen möchtet schreibt uns
+            eine Email an shop@nyomda.de oder kommt bei nyomda in der Druckerei vorbei.</p><p>Bei den Preisangaben handelt es sich um
+            Soli-Preisvorschläge.
+            Persönliche Abholung und deutschlandweite Lieferung sind möglich.
+          </p>
+        
+        </div>
+        <div class="grid-item">
+          <img
+            class="img-artists"
+            src="https://cdn.glitch.global/d8e8e087-aebe-4017-a500-dd19a90dac23/nyomda_img_bg2.png?v=1700661566589"
+          />
+
+          
+          <p>
+            <b>ZINE #1 Um nicht zu verschwinden</b><br>Zine 50 Seiten, Auflage 69, 2 Farben, Papier<br />
+            <b>8-13 €</b>
+          </p>
+        </div>
+        <div class="grid-item">
+          <img
+            class="img-artists"
+            src="https://cdn.glitch.global/d8e8e087-aebe-4017-a500-dd19a90dac23/nyomda_img_bg2.png?v=1700661566589"
+          />
+          <p>
+            <b>Postkarten</b><br>
+          Auflage 35, A6 Postkarten, 2 Farben, Papier<br />
+  
+          <b>4er Set 5-8 €</b><br>
+            <b>Einzeln 2-3 €</b>
+          </p>
+        </div>
+        <div class="grid-item">
+          <img
+            class="img-artists"
+            src="https://cdn.glitch.global/d8e8e087-aebe-4017-a500-dd19a90dac23/nyomda_img_bg2.png?v=1700661566589"
+          />
+
+          <p>
+            <b>Titten auf den Tisch</b><br />
+            A3 Plakat, Auflage 70, 1 Farbe, Papier<br /><b>5-12 €</b>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="row">
+      <div class="footer">
+        <div class="grid" id="links">
+          <div class="grid-item">
+            <p>Nyomda<br />Solidarisches Risokollektiv<br /></p>
+          </div>
+
+          <div class="grid-item">
+            <p>
+              <a href="mailto:riso@nyomda.de">riso@nyomda.de</a></p><p>
+              Lothringer Straße 49 <br />42107 Wuppertal<br />
+            </p>
+          </div>
+
+          <div class="grid-item">
+            <p>
+              <a href="https://www.instagram.com/nyomda_riso/">↗︎ Instagram</a>
+            </p>
+            <p><a href="https://www.stencil.wiki">↗︎ Stencil.wiki</a></p>
+          </div>
+
+          <div class="grid-item">
+            <p>Förderer
+              und Unterstützer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copy">
+      <div class="grid" id="copy">
+        <div class="grid-item">
+          <p>© 2023 nyomda. <a href="https://www.nyomda.de/impressum">Impressum und Datenschutz</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
