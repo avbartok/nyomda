@@ -9,6 +9,20 @@ body {
 }
 
 /* TYPO */
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "monotalic-wide", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  font-size: 4rem;
+  z-index: 1;
+  margin: 0; /* Remove any default margin that might affect positioning */
+}
+
 
 h2 {
   font-family: "monotalic-wide", sans-serif;
@@ -84,6 +98,10 @@ p {
 /* GRIDS */
 /* HEAD */
 
+#head {
+  position: relative;
+}
+
 #head .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -128,8 +146,10 @@ p {
 }
 
 #foto-zwei{
-  background-color: rgba(255, 72, 176,0.75);
+  background-color: rgba(228, 93, 80,0.75);
 }
+
+/* Color Pink: background-color: rgba(255, 72, 176,0.75); */
 
 /* GRID ALLGEMEIN */
 
@@ -227,7 +247,9 @@ p {
  */
 
 .img-artists {
-  width: 100%;
+  width: 100%; /* Ensure the image takes the full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any default inline styling on the image */
 }
 
 /* FOOTER */
