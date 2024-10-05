@@ -1,333 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- 
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="icon"
-      href="./assets/nyomda-fav-2.png"
-    />
-    <link rel="stylesheet" href="https://use.typekit.net/hav7veu.css" />
-    <link
-      rel="stylesheet"
-      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
-    />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="assets/nyomda_favicon.ico" type="image/x-icon">
+  <title>Nyomda Risokollektiv</title>
+  <style>
+    /* Fullscreen layout */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+      overflow: hidden;
+    }
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/antiboredom/p5.patgrad/p5.patgrad.js"></script>
-    <script src="https://threejs.org/build/three.js"></script>
-    <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+    /* Image styling */
+    img {
+      height: 100vh; /* Fit image to the height of the screen */
+      width: auto; /* Maintain aspect ratio */
+    }
 
-    <script src="scripts/p5.riso.js"></script>
-    <script src="scripts/overlay.js"></script>
-    <script src="scripts/script.js"></script>
+    /* For mobile screens, ensure the image is centered and cropped */
+    @media (max-width: 600px) {
+      img {
+        height: 100vh;
+        width: auto;
+        object-fit: cover; /* Crops the image's left and right */
+      }
+    }
+  </style>
+</head>
 
-    <title>nyomda</title>
+<body>
+  <img src="assets/NYOMDA_TemporaryWeb.png" alt="Nyomda Risokollektiv">
+</body>
 
-    <!-- The website stylesheet -->
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="content" role="main">
-        <!-- HEADER -->
-
-        <div class="row" id="head">
-          <img
-                  alt="Nyomda Riso Kollektiv"
-            class="img-artists"
-            src="./assets/nyomda_header-2.png"
-          />
-          <h1>nyomda</h1>
-        </div>
-        
-                <!-- NEWSLETTER -->
-
-        <div class="row" id="news">
-          <div class="grid">
-            <div class="grid-item">
-              <h2>
-                Solidarisches Risokollektiv in Wuppertal, NRW
-              </h2>
-            </div>
-
-            <div class="grid-item">
-              <!-- HIDE  <h2><a href="mailto:newsletter@nyomda.de?subject=Newsletter-Anmeldung&body=Hallo, ich möchte mich für das Nyomda Riso Newsletter anmelden.">✦ NEWSLETTER-ANMELDUNG ✦</a></h2> -->
-
-              <div id="mc_embed_shell">
-                <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-                <style type="text/css">
-                  #mc_embed_signup{background:none; false;clear:left; font:14px Monotalic,Helvetica,Arial,sans-serif; width: 100%;}
-                  /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-                     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-                </style>
-                <div id="mc_embed_signup">
-                  <form action="https://nyomda.us14.list-manage.com/subscribe/post?u=e8231986830d02ac37d7e770b&amp;id=0d3fd109f2&amp;f_id=00cf91e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-                    <div id="mc_embed_signup_scroll"><h2>✦ NEWSLETTER ANMELDUNG ✦</h2>
-                      <div class="indicates-required"><span class="asterisk">*</span> erforderlich</div>
-                      <div class="mc-field-group"><label for="mce-EMAIL">E-Mail-Adresse <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
-                      <div id="mce-responses" class="clear foot">
-                        <div class="response" id="mce-error-response" style="display: none;"></div>
-                        <div class="response" id="mce-success-response" style="display: none;"></div>
-                      </div>
-                      <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                        /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
-                        <input type="text" name="b_e8231986830d02ac37d7e770b_0d3fd109f2" tabindex="-1" value="">
-                      </div>
-                      <div class="optionalParent">
-                        <div class="clear foot">
-                          <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
-                          <p style="margin: 0 auto;"><a href="http://eepurl.com/iFb9f6" title="Mailchimp - email marketing made easy and fun"><span style="display: none; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0; justify-content: center; align-items: center;"></span></a></p>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
-
-
-            </div>
-          </div>
-        </div>
-
-        <!-- NYOMDA -->
-
-        <div class="row" id="nyomda">
-          <div class="grid">
-            <div class="grid-item">
-              <h2>Die Werkstatt</h2>
-              <p>
-                Als unabhängiger Verlag veröffentlichen wir KünstlerInnen
-                Editionen, Comics und Zines. Schaut vorbei und lasst euch von
-                KünstlerInnen aus NRW inspirieren.<br /><br />
-
-                In Kollaboration mit der BAG e.V. Wuppertal bieten wir
-                Bildungsangebote im Bereich bildender Kunst und Illustration für
-                Jugendliche an.<br /><br />
-
-                Wir danken dem Druckkollektiv UNTERDRUCK (Dortmund) für die
-                Unterstützung.
-              </p>
-            </div>
-
-            <div class="grid-item">
-            
-
-            
-            
-            </div>
-
-            <div class="grid-item">
-              <h2>Termine</h2>
-              <p>
-                <b>OFFENE WERKSTATT:</b> jeden zweiten Dienstag im Monat zwischen 17-21 Uhr
-              </p>
-              <p>
-                <b>WORKSHOPS:</b><br />Die ersten Workshoptermine werden  anfang 2024 veröffentlicht. Bleibt am Laufenden mit unserem Newsletter.
-              </p>
-            </div>
-
-            <div class="grid-item">
-              <h2>Kontakt</h2>
-              <p>
-                Ihr findet uns im Atelierraum vom Nachbarschaftsprojekt K49,
-                nahe Platz der Republik. <br /><br />
-                Lothringer Straße 49<br />
-                42107 Wuppertal<br /><br />
-                riso@nyomda.de<br /><br />
-                @nyomda_riso</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- FOTOS -->
-
-        <div class="row" id="fotos">
-          <div class="grid">
-            <div class="grid-item" id="foto-eins">
-              <img
-                      alt="Nyomda Riso Kollektiv"
-                      class="img-artists"
-                      src="./assets/Foto1.png"
-              />
-              
-            </div>
-
-            <div class="grid-item" id="foto-zwei">
-              <img
-                      alt="Nyomda Riso Kollektiv"
-                      class="img-artists"
-                      src="./assets/Foto2.png"
-              />
-             
-          </div>
-        </div>
-    </div>
-
-
-    <!-- FAQ -->
-
-    <div class="row" id="faq">
-      <div class="grid">
-        <div class="grid-item">
-          <h2><a>+ Was ist Risografie?</a></h2>
-          <p>
-            Risodruck ist ein umweltfreundliches maschinelles Siebverfahren aus
-            Japan. Sie eignet sich sehr gut für den Druck von Illustrationen,
-            grafischer Gestaltung und Fotos. Riso überzeugt mit einer ganz
-            eigenen Ästhetik von kräftigen Farben, feiner Rasterung und matten
-            Papieren.
-          </p>
-        </div>
-        <div class="grid-item">
-          <h2><a>+ Was ist ein Zine?</a></h2>
-          <p>
-            Ein "Zine" ist eine selbstveröffentlichte, oft nichtkommerzielle
-            Publikation, die von Einzelpersonen oder kleinen Gruppen erstellt
-            wird. Zines dienen oft als Plattform für persönlichen Ausdruck,
-            subkulturelle Diskussionen, politische Ansichten oder künstlerische
-            Experimente.
-          </p>
-        </div>
-        <div class="grid-item">
-          <h2><a>+ Wie kann ich drucken?</a></h2>
-          <p>
-            Wenn du Risografie ausprobieren möchtest, komm zur offenen Werkstatt oder zu einem unserer Workshops vorbei.
-            <br /><br />
-            Bei aufwändigeren Projekten, sende uns eine Email. Wir schauen, wie
-            wir es umsetzen können.
-          </p>
-        </div>
-        <div class="grid-item">
-          <h2><a>+ Ausstattung?</a></h2>
-          <p>
-            Wir drucken mit unserer MZ-770e, die zwei Farben gleichzeitig
-            bedienen kann. <br /><br />Aktuell verfügen wir über die Farben
-            SCHWARZ und CRIMSON. <br /><br>
-             <span
-              class="dot1"
-            ></span>
-            <!-- HIDE <span class="dot2"></span> -->
-            <span class="dot3"></span> 
-            
-            <br /><br />
-            Unsere Papiersorten:<br />
-            + Munken rough white 300g
-            <br />
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- PRINTS -->
-
-    <div class="row" id="prints">
-      <div class="grid">
-        <div class="grid-item">
-          <h2>Prints</h2>
-          <p>
-          <h2><a href="mailto:riso@nyomda.de?subject=Nyomda Bestellung&body=Hallo, ich möchte folgendes nyomda Werk bestellen:">✦ EMAIL-BESTELLUNG ✦</a></h2>
-          </p>
-          <p>
-            Die nyomda Werke findet ihr hier. Wenn ihr etwas kaufen möchtet schreibt uns
-            eine Email an shop@nyomda.de oder kommt bei nyomda in der Druckerei vorbei.</p><p>Bei den Preisangaben handelt es sich um
-            Soli-Preisvorschläge.
-            Persönliche Abholung und deutschlandweite Lieferung sind möglich.
-          </p>
-        
-        </div>
-        <div class="grid-item">
-          <img
-                  alt="ZINE #1 Um nicht zu verschwinden (Nyomda Press)"
-            class="img-artists"
-            src="assets/zine-01.png"
-          />
-
-          
-          <p>
-            <b>1. Um nicht zu verschwinden</b><br>Zine 50 Seiten, Auflage 69, 2 Farben, Papier<br />
-            <b>8-13 €</b>
-          </p>
-        </div>
-        <div class="grid-item">
-          <img
-                  alt="Postkarten (Nyomda Press)"
-            class="img-artists"
-            src="assets/nyomda_img_bg2.png"
-          />
-          <!-- Hide <p>
-             <b>Postkarten</b><br>
-           Auflage 35, A6 Postkarten, 2 Farben, Papier<br />
-
-           <b>4er Set 5-8 €</b><br>
-             <b>Einzeln 2-3 €</b>
-           </p>-->
-         </div>
-         <div class="grid-item">
-           <img
-                   alt="Titten auf den Tisch (Nyomda Press)"
-             class="img-artists"
-             src="assets/nyomda_img_bg2.png"
-           />
-
-           <!-- Hide <p>
-             <b>Titten auf den Tisch</b><br />
-             A3 Plakat, Auflage 70, 1 Farbe, Papier<br /><b>5-12 €</b>
-           </p> -->
-        </div>
-      </div>
-    </div>
-
-    <!-- FOOTER -->
-
-    <div class="row">
-      <div class="footer">
-        <div class="grid" id="links">
-          <div class="grid-item">
-            <p>Nyomda<br />Solidarisches Risokollektiv<br /></p>
-          </div>
-
-          <div class="grid-item">
-            <p>
-              <a href="mailto:riso@nyomda.de">riso@nyomda.de</a></p><p>
-              Lothringer Straße 49 <br />42107 Wuppertal<br />
-            </p>
-          </div>
-
-          <div class="grid-item">
-            <p>
-              <a href="https://www.instagram.com/nyomda_riso/">↗︎ Instagram</a>
-            </p>
-            <p><a href="https://www.stencil.wiki/atlas/nyomda">↗︎ Stencil.wiki</a></p>
-            <p><a href="https://www.peopleofprint.com">↗︎ People of Print</a></p>
-          </div>
-
-          <div class="grid-item">
-            <img
-                    alt="Külturbüro Wuppertal"
-                    class="img-artists"
-                    src="/assets/wppt_kulturbuero_1z_b.png"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="copy">
-      <div class="grid" id="copy">
-        <div class="grid-item">
-          <p>© 2023 nyomda. <a href="https://www.nyomda.de/impressum">Impressum und Datenschutz</a></p>
-        </div>
-      </div>
-    </div>
-  </body>
 </html>

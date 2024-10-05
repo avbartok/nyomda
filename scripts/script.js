@@ -6,7 +6,7 @@ $(document).ready(function() {
         $('body').append(`
             <div id='star${i}' class='sticker' style='left:${left}px; top:${top}px; width:${diameter}px; height:${diameter}px;'>
                 <div class='sticker-content'>
-                    <b>OFFENE WERKSTATT</b> <br> Dienstag 19.12. ab 17-21h
+                    <b>OFFENE WERKSTATT</b> <br> <b> JULI 2024 </br> 16.07/30.07 </br> 17-21 Uhr
                 </div>
             </div>
         `);

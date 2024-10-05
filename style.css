@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Die_Bruecke-webfont";
+  src: url("assets/Die_Bruecke-webfont.woff2") format("woff2"),
+  }
+
 body {
   background-color: #eeecec;
   background-size: 100%, 100%;
@@ -14,7 +19,7 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: "monotalic-wide", sans-serif;
+  font-family: "Die_Bruecke-webfont", sans-serif;
   font-weight: 700;
   font-style: normal;
   text-align: center;
@@ -25,13 +30,14 @@ h1 {
 
 
 h2 {
-  font-family: "monotalic-wide", sans-serif;
+  font-family: "Die_Bruecke-webfont", sans-serif;
   font-weight: 300;
+  font-size: 2rem;
   font-style: normal;
 }
 
 h3 {
-  font-family: "monotalic-wide", sans-serif;
+  font-family: "Arial", sans-serif;
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
@@ -40,17 +46,45 @@ h3 {
 }
 
 h4 {
-  font-family: "monotalic-wide", sans-serif;
+  font-family: "Arial", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
 p {
-  font-family: "monotalic", sans-serif;
-  font-size: 16px;
+  font-family: "Arial", sans-serif;
+  font-size: 1rem;
   font-weight: 400;
   font-style: normal;
   line-height: 1.2;
+}
+
+
+/* HEADER */
+
+.nyomda-header {
+  height: 100px;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nyomda-logo {
+  height: 80px;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nyomda-header h1 {
+  font-style: bold;
+  margin: 0;
+  margin-left: 100px;
+  font-size: 2rem;
+  color: white;
 }
 
 /* BADGE */
@@ -120,11 +154,11 @@ p {
   top: 0;
 }
 
-/* NEWS */
+/* HEADER FOTO */
 
 #news .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 10px;
   align-content: center;
   justify-content: center;
@@ -133,7 +167,32 @@ p {
   top: 0;
 }
 
+/* NEWS */
+
+#news .grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  align-content: center;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
 /* NYOMDA */
+
+#nyomda .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  align-content: center;
+  justify-content: center;
+  padding: 10px;
+  height: 100%;
+  top: 0;
+}
 
 /* FOTOS */
 
@@ -147,16 +206,6 @@ p {
   height: 100%;
   top: 0;
 }
-
-#foto-eins{
-
-}
-
-#foto-zwei{
-
-}
-
-/* Color Pink: background-color: rgba(255, 72, 176,0.75); */
 
 /* GRID ALLGEMEIN */
 
@@ -175,6 +224,7 @@ p {
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  background-color: yellow;
   color: black;
   font-size: 18px;
   font-weight: bold;
@@ -259,6 +309,12 @@ p {
   display: block; /* Remove any default inline styling on the image */
 }
 
+.img-logo {
+  width: 70%; /* Ensure the image takes the full width of the container */
+align: center;
+  display: block; /* Remove any default inline styling on the image */
+}
+
 /* FOOTER */
 
 .grid-footer {
@@ -339,14 +395,6 @@ p {
 
 /* COLORED BACKGROUND */
 
-#nyomda {
-  background-color: rgba(228, 93, 80,0.65);
-}
-
-#prints {
-  background-color: rgba(228, 93, 80,0.65);
-}
-
 ::selection {
   color: #000;
   background: rgba(255, 72, 176,0.85);
@@ -366,7 +414,7 @@ p {
 .dot2 {
   height: 20px;
   width: 20px;
-  background-color: rgba(255, 72, 176,0.85);
+  background-color: rgba(255, 78, 62, 0.85);
   border-radius: 50%;
   display: inline-block;
 }
@@ -374,7 +422,23 @@ p {
 .dot3 {
   height: 20px;
   width: 20px;
-  background-color: rgba(228, 93, 80,0.85);
+  background-color: rgb(255, 93, 185);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot4 {
+  height: 20px;
+  width: 20px;
+  background-color: rgba(40, 129, 253, 0.85);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot5 {
+  height: 20px;
+  width: 20px;
+  background-color: rgb(255, 245, 107);
   border-radius: 50%;
   display: inline-block;
 }
@@ -407,6 +471,7 @@ p {
 
     h2 {
       margin-top: 0;
+      background-color: #E3ED55;
     }
 
   h2 a{
