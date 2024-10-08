@@ -311,7 +311,7 @@ p {
 
 .img-logo {
   width: 70%; /* Ensure the image takes the full width of the container */
-align: center;
+  align-content: center;
   display: block; /* Remove any default inline styling on the image */
 }
 

@@ -9,13 +9,18 @@
   <style>
     /* Fullscreen layout */
     html, body {
-      margin: 0;
+      @font-face {
+      font-family: "Die_Bruecke-webfont";
+      src: url("assets/Die_Bruecke-webfont.woff2") format("woff2"),
+     }
+     font-family: "Die_Bruecke-webfont", sans-serif;
+      margin: 50px;
       padding: 0;
       height: 100%;
-      display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #000;
+      background-color: white;
+      color: black;
       overflow: hidden;
     }
 
@@ -37,9 +42,10 @@
 </head>
 
 <body>
-  <h2>Risografie Tipps & Tricks / Motivwahl</h2>
-  <h2>Risografie Tipps & Tricks / Farbseparation</h2>
-  <h2>Risografie Tipps & Tricks / Druckdatenexport</h2>
+  <h2>Risografie Tipps & Tricks</h2><br>
+  <h2>1. Motivwahl</h2><br>
+  <h2>2. Farbseparation</h2><br>
+  <h2>3. Druckdatenexport</h2>
 </body>
 
 </html>
