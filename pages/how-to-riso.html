@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="assets/nyomda_favicon.ico" type="image/x-icon">
+  <title>Nyomda Risokollektiv</title>
+  <style>
+    /* Fullscreen layout */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+      overflow: hidden;
+    }
+
+    /* Image styling */
+    img {
+      height: 100vh; /* Fit image to the height of the screen */
+      width: auto; /* Maintain aspect ratio */
+    }
+
+    /* For mobile screens, ensure the image is centered and cropped */
+    @media (max-width: 600px) {
+      img {
+        height: 100vh;
+        width: auto;
+        object-fit: cover; /* Crops the image's left and right */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Risografie Tipps & Tricks / Motivwahl</h2>
+  <h2>Risografie Tipps & Tricks / Farbseparation</h2>
+  <h2>Risografie Tipps & Tricks / Druckdatenexport</h2>
+</body>
+
+</html>
